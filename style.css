@@ -158,16 +158,3 @@ body {
   border: 1px solid white;
 }
 
-/* Tutorial Description Styles */
-.tutorial-description {
-  margin-top: 10px;
-  text-align: center;
-}
-
-.external-link {
-  color: inherit;
-}
-
-.external-link:hover {
-  text-decoration: none;
-}
