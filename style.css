@@ -1,0 +1,173 @@
+/* Font Imports */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=League+Spartan:wght@400;600&family=Quicksand:wght@400;600&display=swap');
+/* Reset and Global Styles */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Root Variables */
+:root {
+  --font-quicksand: "Quicksand", sans-serif;
+  --font-Inter: 'Inter', sans-serif;
+  --font-league: "League Spartan", sans-serif;
+  --clr-white: white;
+}
+
+/* Theme Styles */
+[data-selected-theme="nightShift"] {
+  --bg-color: linear-gradient(to top, #021313, #1a0f28);
+  --clr-theme: #39739d;
+  --bg-theme-clr: #e1ecf4;
+  --clr-border: #7aa7c7;
+  --text-color: rgb(255, 255, 255);
+}
+
+[data-selected-theme="oceanBreeze"] {
+  --bg-color: linear-gradient(to top, #43dede, #073a52);
+  --clr-theme: #9d395e;
+  --bg-theme-clr: #e1f1f4;
+  --clr-border: #7ab8c7;
+  --text-color: rgb(255, 255, 255);
+}
+
+[data-selected-theme="mysticMidnight"] {
+  --bg-color: linear-gradient(to top, #040d0d, #280752);
+  --clr-theme: #41399d;
+  --bg-theme-clr: #e1e4f4;
+  --clr-border: #5e58cf;
+  --text-color: rgb(255, 255, 255);
+}
+
+[data-selected-theme="goldenSunrise"] {
+  --bg-color: linear-gradient(to top, #544c0a, #d24509);
+  --clr-theme: #505048;
+  --bg-theme-clr: #f4f4e1;
+  --clr-border: #cfc358;
+  --text-color: rgb(255, 255, 255);
+}
+
+/* Layout Styles */
+body {
+  width: 100vw;
+  height: 100vh;
+  color: var(--text-color);
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  align-items: center;
+  font-family: var(--font-quicksand);
+  background: var(--bg-color);
+}
+
+.theme-container {
+  max-width: 600px;
+  padding: 20px;
+  padding-bottom: 10px;
+  margin-inline: auto;
+  border-radius: 10px;
+  background-color: var(--bg-color);
+  box-shadow: 2px 3px 7px var(--bg-color);
+  position: relative;
+  border: 1px solid var(--clr-white);
+}
+
+/* Heading Styles */
+.theme-title {
+  font-family: var(--font-Inter);
+  font-size: 1.1rem;
+  color: #ffffff;
+  padding: 5px;
+  position: relative;
+}
+
+.theme-title::before {
+  content: '-';
+  position: absolute;
+  bottom: -8px;
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: rgb(255, 79, 79);
+}
+
+.theme-title > span {
+  color: black;
+  background-color: white;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.theme-subtitle {
+  font-family: var(--font-league);
+  font-size: clamp(1.9rem, 0.5285714285714285rem + 6.857142857142858vw, 3.1rem);
+  margin-bottom: 2.5rem;
+  margin-top: 20px;
+  color: inherit;
+}
+
+/* Theme Picker Styles */
+.theme-picker-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+  margin-bottom: 1.5rem;
+}
+
+.theme-btn {
+  background-color: var(--bg-theme-clr);
+  border-radius: 3px;
+  border: 1px solid var(--clr-border);
+  color: var(--clr-theme);
+  cursor: pointer;
+  font-family: var(--font-quicksand);
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 8px .8em;
+}
+
+.theme-btn:hover,
+.theme-btn:focus {
+  background-color: #b3d3ea;
+  color: #2c5777;
+}
+
+.theme-btn[aria-pressed="true"] {
+  border: 2px dotted rgb(128, 83, 0);
+}
+
+/* External Link Styles */
+.external-links {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.external-link > svg {
+  background-color: white;
+  padding: 3px;
+  border-radius: 50px;
+  font-size: 35px;
+}
+
+.external-link > svg:hover {
+  background-color: #b3d3ea;
+  border: 1px solid white;
+}
+
+/* Tutorial Description Styles */
+.tutorial-description {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.external-link {
+  color: inherit;
+}
+
+.external-link:hover {
+  text-decoration: none;
+}
